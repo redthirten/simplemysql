@@ -78,7 +78,7 @@ db = SimpleMysql(
 ## Usage example:
 ```python
 # create table, if it doesn't already exist
-self.db.query("CREATE TABLE IF NOT EXISTS books (id INT AUTO_INCREMENT PRIMARY KEY, type VARCHAR(255), name VARCHAR(255), price DECIMAL(, 2), year INT)")
+db.query("CREATE TABLE IF NOT EXISTS books (id INT AUTO_INCREMENT PRIMARY KEY, type VARCHAR(255), name VARCHAR(255), price DECIMAL(10, 2), year INT)")
 
 # insert a record to the "books" table
 db.insert("books", {"type": "paperback", "name": "Time Machine", "price": 5.55, "year": 1997})
